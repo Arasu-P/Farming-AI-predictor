@@ -172,11 +172,331 @@ const Crops = () => {
           yield: 'Expected yield: 20-25 tonnes per hectare with proper care'
         }
       },
+      {
+        id: '5',
+        name: 'Potato',
+        image: carrotRetro,
+        category: 'Vegetable',
+        season: 'Rabi',
+        sowingTime: 'Oct-Nov',
+        harvestTime: '90-110 days',
+        avgYield: '20-30 tonnes/ha',
+        difficulty: 'Medium',
+        advisory: {
+          sowing: [
+            'Select certified seed potatoes free from diseases',
+            'Cut large tubers 2-3 days before planting',
+            'Plant at 60cm row spacing and 20cm plant spacing',
+            'Ensure proper soil drainage and organic matter'
+          ],
+          irrigation: [
+            'Light irrigation after planting',
+            'Critical water requirement during tuber formation',
+            'Avoid waterlogging to prevent rot',
+            'Stop irrigation before harvest'
+          ],
+          pests: [
+            'Late blight: Apply preventive fungicides',
+            'Aphids: Monitor and spray if needed',
+            'Cutworms: Use soil treatment',
+            'Potato tuber moth: Proper storage practices'
+          ],
+          yield: 'Expected yield: 20-30 tonnes per hectare with quality seed'
+        }
+      },
+      {
+        id: '6',
+        name: 'Cabbage',
+        image: cornRetro,
+        category: 'Vegetable',
+        season: 'Rabi',
+        sowingTime: 'Aug-Oct',
+        harvestTime: '90-120 days',
+        avgYield: '40-50 tonnes/ha',
+        difficulty: 'Easy',
+        advisory: {
+          sowing: [
+            'Choose varieties suitable for Karnataka climate',
+            'Prepare well-drained fertile beds',
+            'Transplant seedlings at 4-5 weeks',
+            'Maintain 45cm x 45cm spacing'
+          ],
+          irrigation: [
+            'Regular irrigation during head formation',
+            'Avoid water stress during growth',
+            'Mulching helps retain moisture',
+            'Proper drainage essential'
+          ],
+          pests: [
+            'Diamond back moth: Use BT spray',
+            'Aphids: Spray neem oil',
+            'Clubroot: Soil pH management',
+            'Caterpillars: Manual removal and spraying'
+          ],
+          yield: 'Expected yield: 40-50 tonnes per hectare with proper care'
+        }
+      },
+      {
+        id: '7',
+        name: 'Carrot',
+        image: carrotRetro,
+        category: 'Vegetable',
+        season: 'Rabi',
+        sowingTime: 'Oct-Dec',
+        harvestTime: '100-120 days',
+        avgYield: '25-30 tonnes/ha',
+        difficulty: 'Easy',
+        advisory: {
+          sowing: [
+            'Direct seeding in well-prepared beds',
+            'Maintain proper soil texture',
+            'Row spacing of 30cm and thin to 5cm',
+            'Use organic matter for better root development'
+          ],
+          irrigation: [
+            'Light frequent irrigation',
+            'Avoid waterlogging',
+            'Critical during root development',
+            'Reduce irrigation before harvest'
+          ],
+          pests: [
+            'Root fly: Use crop rotation',
+            'Aphids: Regular monitoring',
+            'Nematodes: Soil solarization',
+            'Leaf blight: Fungicide application'
+          ],
+          yield: 'Expected yield: 25-30 tonnes per hectare of quality roots'
+        }
+      },
+      {
+        id: '8',
+        name: 'Brinjal',
+        image: chiliRetro,
+        category: 'Vegetable',
+        season: 'Kharif/Rabi',
+        sowingTime: 'Jun-Jul, Nov-Dec',
+        harvestTime: '120-150 days',
+        avgYield: '30-40 tonnes/ha',
+        difficulty: 'Medium',
+        advisory: {
+          sowing: [
+            'Use disease-resistant varieties',
+            'Transplant healthy seedlings',
+            'Maintain 75cm x 60cm spacing',
+            'Apply organic manure before planting'
+          ],
+          irrigation: [
+            'Regular irrigation during flowering',
+            'Avoid water stress',
+            'Drip irrigation preferred',
+            'Proper drainage essential'
+          ],
+          pests: [
+            'Shoot borer: Use pheromone traps',
+            'Fruit borer: Regular monitoring',
+            'Aphids: Neem oil spray',
+            'Bacterial wilt: Resistant varieties'
+          ],
+          yield: 'Expected yield: 30-40 tonnes per hectare with good management'
+        }
+      },
+      {
+        id: '9',
+        name: 'Cucumber',
+        image: cornRetro,
+        category: 'Vegetable',
+        season: 'Summer/Rabi',
+        sowingTime: 'Oct-Nov, Feb-Mar',
+        harvestTime: '60-80 days',
+        avgYield: '15-20 tonnes/ha',
+        difficulty: 'Easy',
+        advisory: {
+          sowing: [
+            'Direct seeding or transplanting',
+            'Prepare raised beds for drainage',
+            'Use trellising for vine support',
+            'Maintain 1.5m x 0.5m spacing'
+          ],
+          irrigation: [
+            'Frequent light irrigation',
+            'Critical during fruit development',
+            'Avoid overhead irrigation',
+            'Mulching helps moisture retention'
+          ],
+          pests: [
+            'Downy mildew: Protective sprays',
+            'Aphids: Yellow sticky traps',
+            'Fruit flies: Monitoring and control',
+            'Powdery mildew: Sulfur application'
+          ],
+          yield: 'Expected yield: 15-20 tonnes per hectare of quality fruits'
+        }
+      },
+      {
+        id: '10',
+        name: 'apple',
+        image: tomatoRetro,
+        category: 'Fruit',
+        season: 'Perennial',
+        sowingTime: 'Jun-Aug',
+        harvestTime: '3-5 years',
+        avgYield: '100-150 fruits/tree',
+        difficulty: 'Hard',
+        advisory: {
+          sowing: [
+            'Select grafted saplings of proven varieties',
+            'Plant during monsoon season',
+            'Maintain 8m x 8m spacing',
+            'Prepare large pits with organic matter'
+          ],
+          irrigation: [
+            'Regular watering for young plants',
+            'Reduce irrigation during flowering',
+            'Drip irrigation for mature trees',
+            'Water stress during fruit set'
+          ],
+          pests: [
+            'Fruit fly: Use fruit bagging',
+            'Anthracnose: Copper fungicide',
+            'Hoppers: Monitoring and spraying',
+            'Powdery mildew: Preventive measures'
+          ],
+          yield: 'Expected yield: 100-150 fruits per tree at maturity'
+        }
+      },
+      {
+        id: '11',
+        name: 'Papaya',
+        image: tomatoRetro,
+        category: 'Fruit',
+        season: 'Year-round',
+        sowingTime: 'Throughout year',
+        harvestTime: '8-12 months',
+        avgYield: '50-80 tonnes/ha',
+        difficulty: 'Medium',
+        advisory: {
+          sowing: [
+            'Use tissue culture plants for uniformity',
+            'Plant during favorable weather',
+            'Maintain 2m x 2m spacing',
+            'Ensure proper drainage'
+          ],
+          irrigation: [
+            'Regular irrigation required',
+            'Avoid waterlogging',
+            'Drip irrigation preferred',
+            'Mulching around plants'
+          ],
+          pests: [
+            'Papaya ringspot virus: Use resistant varieties',
+            'Fruit fly: Monitoring and bagging',
+            'Aphids: Regular spraying',
+            'Root rot: Proper drainage'
+          ],
+          yield: 'Expected yield: 50-80 tonnes per hectare with dwarf varieties'
+        }
+      },
+      {
+        id: '12',
+        name: 'Grapes',
+        image: chiliRetro,
+        category: 'Fruit',
+        season: 'Rabi',
+        sowingTime: 'Oct-Nov',
+        harvestTime: '16-18 months',
+        avgYield: '25-30 tonnes/ha',
+        difficulty: 'Hard',
+        advisory: {
+          sowing: [
+            'Use grafted vines on rootstock',
+            'Prepare well-drained vineyard',
+            'Install trellising system',
+            'Maintain 3m x 1.5m spacing'
+          ],
+          irrigation: [
+            'Drip irrigation mandatory',
+            'Controlled irrigation for quality',
+            'Reduce water during ripening',
+            'Proper drainage essential'
+          ],
+          pests: [
+            'Downy mildew: Copper sprays',
+            'Thrips: Blue sticky traps',
+            'Anthracnose: Fungicide application',
+            'Mealybugs: Biological control'
+          ],
+          yield: 'Expected yield: 25-30 tonnes per hectare with proper management'
+        }
+      },
+      {
+        id: '13',
+        name: 'Pomegranate',
+        image: tomatoRetro,
+        category: 'Fruit',
+        season: 'Perennial',
+        sowingTime: 'Jun-Aug',
+        harvestTime: '2-3 years',
+        avgYield: '15-20 tonnes/ha',
+        difficulty: 'Medium',
+        advisory: {
+          sowing: [
+            'Use disease-free grafted plants',
+            'Plant during monsoon',
+            'Maintain 4m x 4m spacing',
+            'Prepare deep pits with compost'
+          ],
+          irrigation: [
+            'Drip irrigation recommended',
+            'Avoid water stress during fruit development',
+            'Reduce irrigation near harvest',
+            'Mulching helps moisture conservation'
+          ],
+          pests: [
+            'Fruit borer: Pheromone traps',
+            'Aphids: Neem oil application',
+            'Bacterial blight: Copper sprays',
+            'Thrips: Monitoring and control'
+          ],
+          yield: 'Expected yield: 15-20 tonnes per hectare at full bearing'
+        }
+      },
+      {
+        id: '14',
+        name: 'Green Beans',
+        image: cornRetro,
+        category: 'Vegetable',
+        season: 'Rabi/Summer',
+        sowingTime: 'Oct-Nov, Feb-Mar',
+        harvestTime: '60-75 days',
+        avgYield: '8-12 tonnes/ha',
+        difficulty: 'Easy',
+        advisory: {
+          sowing: [
+            'Direct seeding in rows',
+            'Use bush or pole varieties',
+            'Maintain 30cm row spacing',
+            'Apply organic matter before sowing'
+          ],
+          irrigation: [
+            'Regular light irrigation',
+            'Critical during flowering and pod formation',
+            'Avoid waterlogging',
+            'Mulching recommended'
+          ],
+          pests: [
+            'Bean fly: Use seed treatment',
+            'Aphids: Regular monitoring',
+            'Pod borer: IPM approach',
+            'Rust: Resistant varieties'
+          ],
+          yield: 'Expected yield: 8-12 tonnes per hectare of tender pods'
+        }
+      }
     ];
     setCrops(cropData);
   }, []);
 
-  const categories = ['all', 'Vegetable', 'Cereal', 'Spice', 'Pulse'];
+  const categories = ['all', 'Vegetable', 'Fruit', 'Cereal', 'Spice', 'Pulse'];
 
   const filteredCrops = crops.filter(crop => {
     const matchesSearch = crop.name.toLowerCase().includes(searchQuery.toLowerCase());
