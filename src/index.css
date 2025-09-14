@@ -7,7 +7,7 @@
 @layer base {
   :root {
     /* Core colors - Natural farming palette */
-    --background: 45 20% 98%;
+    --background: 45 15% 97%;
     --foreground: 145 85% 15%;
 
     --card: 0 0% 100%;
