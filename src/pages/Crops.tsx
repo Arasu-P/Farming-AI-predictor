@@ -9,6 +9,16 @@ import tomatoRetro from '@/assets/tomato-retro.jpg';
 import carrotRetro from '@/assets/carrot-retro.jpg';
 import cornRetro from '@/assets/corn-retro.jpg';
 import chiliRetro from '@/assets/chili-retro.jpg';
+import onion from '@/assets/onion.jpg';
+import Beans from '@/assets/Beans.jpg';
+import cabbage from '@/assets/cabbage.jpg';
+import potato from '@/assets/potato.jpg';
+import brinjal from '@/assets/brinjal.jpg';
+import apples from '@/assets/apples.jpg';
+import cucumber from '@/assets/cucumber.jpg';
+import papaya from '@/assets/papaya.jpg';
+import pomo from '@/assets/pomo.jpg';
+import grapes from '@/assets/grapes.jpg';
 
 interface Crop {
   id: string;
@@ -143,7 +153,7 @@ const Crops = () => {
       {
         id: '4',
         name: 'Onion',
-        image: carrotRetro,
+        image: onion,
         category: 'Vegetable',
         season: 'Rabi',
         sowingTime: 'Oct-Nov',
@@ -175,7 +185,7 @@ const Crops = () => {
       {
         id: '5',
         name: 'Potato',
-        image: carrotRetro,
+        image: potato,
         category: 'Vegetable',
         season: 'Rabi',
         sowingTime: 'Oct-Nov',
@@ -207,7 +217,7 @@ const Crops = () => {
       {
         id: '6',
         name: 'Cabbage',
-        image: cornRetro,
+        image: cabbage,
         category: 'Vegetable',
         season: 'Rabi',
         sowingTime: 'Aug-Oct',
@@ -271,7 +281,7 @@ const Crops = () => {
       {
         id: '8',
         name: 'Brinjal',
-        image: chiliRetro,
+        image: brinjal,
         category: 'Vegetable',
         season: 'Kharif/Rabi',
         sowingTime: 'Jun-Jul, Nov-Dec',
@@ -303,7 +313,7 @@ const Crops = () => {
       {
         id: '9',
         name: 'Cucumber',
-        image: cornRetro,
+        image: cucumber,
         category: 'Vegetable',
         season: 'Summer/Rabi',
         sowingTime: 'Oct-Nov, Feb-Mar',
@@ -335,7 +345,7 @@ const Crops = () => {
       {
         id: '10',
         name: 'apple',
-        image: tomatoRetro,
+        image: apples,
         category: 'Fruit',
         season: 'Perennial',
         sowingTime: 'Jun-Aug',
@@ -367,7 +377,7 @@ const Crops = () => {
       {
         id: '11',
         name: 'Papaya',
-        image: tomatoRetro,
+        image: papaya,
         category: 'Fruit',
         season: 'Year-round',
         sowingTime: 'Throughout year',
@@ -399,7 +409,7 @@ const Crops = () => {
       {
         id: '12',
         name: 'Grapes',
-        image: chiliRetro,
+        image: grapes,
         category: 'Fruit',
         season: 'Rabi',
         sowingTime: 'Oct-Nov',
@@ -431,7 +441,7 @@ const Crops = () => {
       {
         id: '13',
         name: 'Pomegranate',
-        image: tomatoRetro,
+        image: pomo,
         category: 'Fruit',
         season: 'Perennial',
         sowingTime: 'Jun-Aug',
@@ -463,7 +473,7 @@ const Crops = () => {
       {
         id: '14',
         name: 'Green Beans',
-        image: cornRetro,
+        image: Beans,
         category: 'Vegetable',
         season: 'Rabi/Summer',
         sowingTime: 'Oct-Nov, Feb-Mar',
