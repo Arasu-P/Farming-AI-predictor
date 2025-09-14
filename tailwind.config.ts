@@ -90,6 +90,11 @@ export default {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      boxShadow: {
+        'soft': '0 4px 20px -2px hsl(var(--primary) / 0.1)',
+        'card': '0 8px 30px -8px hsl(var(--primary) / 0.15)',
+        'hero': '0 20px 60px -12px hsl(var(--primary) / 0.25)',
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
