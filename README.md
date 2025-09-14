@@ -1,73 +1,103 @@
-# Welcome to your Lovable project
+#Smart Crop Advisory System 🌱
 
-## Project info
+A professional, modern, and responsive web platform designed for small and marginal farmers. The system uses AI and data analytics to provide personalized crop guidance, weather insights, market price updates, pest/disease management tips, and predictive yield forecasts. The platform combines farmer-friendly language, retro-style fresh produce imagery, and trust-building animations to make farming recommendations accessible and actionable.
 
-**URL**: https://lovable.dev/projects/01c24b4f-6538-4235-bb19-d7c45c1bf793
+✨ Features
 
-## How can I edit this code?
+Homepage with impactful hero section, search bar for crops, and quick navigation to all modules.
 
-There are several ways of editing your application.
+Market Page with real-time crop prices, trends, sell/hold recommendations, and seasonal insights.
 
-**Use Lovable**
+Crops Page offering crop-specific advisory, irrigation schedules, pest alerts, yield forecasts, and step-by-step checklists.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/01c24b4f-6538-4235-bb19-d7c45c1bf793) and start prompting.
+Weather Page with animated weather icons, daily and multi-day forecasts, and simple recommendations for farm planning.
 
-Changes made via Lovable will be committed automatically to this repo.
+Farmer Dashboard with login/OTP authentication, personalized crop lists, alerts, and growth predictions.
 
-**Use your preferred IDE**
+Animations powered by modern libraries for fade, slide, hover-scale, and data-pulse effects to build trust.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Responsive UI built with a natural color palette and retro illustrations of vegetables and fruits.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Localization support for English and Kannada.
 
-Follow these steps:
+Accessibility with large fonts, high-contrast buttons, icons, and mobile-friendly layouts.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Secure & private farmer data handling.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+🖼️ Design Philosophy
 
-# Step 3: Install the necessary dependencies.
-npm i
+Natural color palette (greens, yellows, earthy tones).
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+Retro-style illustrations of fresh fruits and vegetables for familiarity and trust.
+
+Professional yet farmer-friendly interface, balancing simplicity and scalability.
+
+Subtle animations that feel modern and reliable without overwhelming farmers.
+
+📂 Project Structure
+
+Homepage: Hero section, search bar, quick links, trust-building features.
+
+Market: Price board with trends, seasonal insights, and sell/hold suggestions.
+
+Crops: Crop grid with advisory panels, step-by-step guides, and yield forecasts.
+
+Weather: Forecasts with animated icons and weather-based recommendations.
+
+Dashboard: Personalized farmer login, alerts, and monthly predictions.
+
+🚀 Getting Started
+
+Clone the repository:
+
+git clone https://github.com/your-username/smart-crop-advisory.git
+cd smart-crop-advisory
+
+
+Install dependencies:
+
+npm install
+
+
+Start development server:
+
 npm run dev
-```
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Open in browser:
 
-**Use GitHub Codespaces**
+http://localhost:5173
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+🔧 Tech Stack
 
-## What technologies are used for this project?
+Frontend: React, TailwindCSS, Framer Motion
 
-This project is built with:
+Routing: React Router
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Charts/Visuals: Recharts (or similar)
 
-## How can I deploy this project?
+Backend (future scope): Node.js/Express with APIs for weather, market prices, and crop data
 
-Simply open [Lovable](https://lovable.dev/projects/01c24b4f-6538-4235-bb19-d7c45c1bf793) and click on Share -> Publish.
+Authentication: Phone OTP / farmer ID login (planned)
 
-## Can I connect a custom domain to my Lovable project?
+📊 Data Sources (suggested)
 
-Yes, you can!
+Weather API (OpenWeather, IMD data feeds)
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Market Prices (AGMARKNET, local mandi APIs)
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Crop Advisory (custom dataset, agricultural extensions, AI models)
+
+🌍 Localization
+
+English (default)
+
+Kannada (translation-ready)
+
+🤝 Contribution
+
+Contributions are welcome! Please fork the repo, create a branch, and submit a pull request. For major changes, open an issue first to discuss what you’d like to change.
+
+📜 License
+
+This project is licensed under the MIT License — free to use, modify, and distribute.
