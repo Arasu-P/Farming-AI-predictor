@@ -1,18 +1,21 @@
-import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Sprout } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, Sprout } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/context/LanguageContext";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const { language, toggleLanguage, t } = useLanguage();
 
   const navItems = [
-    { name: 'Home', path: '/' },
-    { name: 'Market', path: '/market' },
-    { name: 'Crops', path: '/crops' },
-    { name: 'Weather', path: '/weather' },
-    { name: 'Dashboard', path: '/dashboard' },
+    { name: t.nav.home, path: "/" },
+    { name: t.nav.market, path: "/market" },
+    { name: t.nav.crops, path: "/crops" },
+    { name: t.nav.weather, path: "/weather" },
+    { name: t.nav.dashboard, path: "/dashboard" },
+    { name: t.nav.predict, path: "/predict" }
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -28,7 +31,9 @@ const Navigation = () => {
             </div>
             <div>
               <h1 className="font-bold text-lg text-foreground">CropSmart</h1>
-              <p className="text-xs text-muted-foreground hidden sm:block">Karnataka Advisory</p>
+              <p className="text-xs text-muted-foreground hidden sm:block">
+                Karnataka Advisory
+              </p>
             </div>
           </Link>
 
@@ -41,8 +46,8 @@ const Navigation = () => {
                   to={item.path}
                   className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                     isActive(item.path)
-                      ? 'bg-primary text-primary-foreground'
-                      : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                      ? "bg-primary text-primary-foreground"
+                      : "text-muted-foreground hover:text-foreground hover:bg-muted"
                   }`}
                 >
                   {item.name}
@@ -53,8 +58,8 @@ const Navigation = () => {
 
           {/* Language Toggle */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" size="sm" className="text-xs">
-              English | ಕನ್ನಡ
+            <Button variant="outline" size="sm" onClick={toggleLanguage} className="text-xs">
+              {language === "en" ? "English | ಕನ್ನಡ" : "ಕನ್ನಡ | English"}
             </Button>
           </div>
 
@@ -80,8 +85,8 @@ const Navigation = () => {
                   to={item.path}
                   className={`block px-3 py-2 rounded-lg text-base font-medium transition-all duration-200 ${
                     isActive(item.path)
-                      ? 'bg-primary text-primary-foreground'
-                      : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                      ? "bg-primary text-primary-foreground"
+                      : "text-muted-foreground hover:text-foreground hover:bg-muted"
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -89,8 +94,16 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="px-3 py-2">
-                <Button variant="outline" size="sm" className="text-xs w-full">
-                  English | ಕನ್ನಡ
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="text-xs w-full"
+                  onClick={() => {
+                    toggleLanguage();
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  {language === "en" ? "English | ಕನ್ನಡ" : "ಕನ್ನಡ | English"}
                 </Button>
               </div>
             </div>

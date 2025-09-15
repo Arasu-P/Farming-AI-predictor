@@ -11,7 +11,7 @@ import Crops from "./pages/Crops";
 import Weather from "./pages/Weather";
 import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
-
+import Predict from "./pages/Predict";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -23,15 +23,18 @@ const App = () => (
         <div className="min-h-screen flex flex-col">
           <Navigation />
           <main className="flex-1">
-            <Routes>
-              <Route path="/" element={<Homepage />} />
-              <Route path="/market" element={<Market />} />
-              <Route path="/crops" element={<Crops />} />
-              <Route path="/weather" element={<Weather />} />
-              <Route path="/dashboard" element={<Dashboard />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
+          
+
+<Routes>
+  <Route path="/" element={<Homepage />} />
+  <Route path="/market" element={<Market />} />
+  <Route path="/crops" element={<Crops />} />
+  <Route path="/weather" element={<Weather />} />
+  <Route path="/dashboard" element={<Dashboard />} />
+  <Route path="/predict" element={<Predict />} /> 
+  <Route path="*" element={<NotFound />} />
+</Routes>
+
           </main>
           <Footer />
         </div>
