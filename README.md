@@ -1,4 +1,4 @@
-#Smart Crop Advisory System 🌱
+Smart Crop Advisory System 🌱
 
 A professional, modern, and responsive web platform designed for small and marginal farmers. The system uses AI and data analytics to provide personalized crop guidance, weather insights, market price updates, pest/disease management tips, and predictive yield forecasts. The platform combines farmer-friendly language, retro-style fresh produce imagery, and trust-building animations to make farming recommendations accessible and actionable.
 
@@ -50,8 +50,7 @@ Dashboard: Personalized farmer login, alerts, and monthly predictions.
 
 Clone the repository:
 
-git clone https://github.com/your-username/smart-crop-advisory.git
-cd smart-crop-advisory
+git clone https://https://github.com/Arasu-P/Farming-AI-predictor.git
 
 
 Install dependencies:

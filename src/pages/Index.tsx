@@ -1,14 +1,24 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React from 'react';
+import Marketplace from './Marketplace';
+import Predict from './Predict';
 
-const Index = () => {
+const App = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="bg-gray-100 min-h-screen">
+      {/* This could be your navigation or header */}
+      <header className="py-4 px-6 bg-white shadow-md">
+        <h1 className="text-2xl font-bold">Farming AI Predictor</h1>
+      </header>
+      
+      {/* This is the main content area */}
+      <main className="p-6">
+        {/* You can choose which component to render */}
+        <Marketplace />
+        {/* Or render the Predict component */}
+        {/* <Predict /> */}
+      </main>
     </div>
   );
 };
 
-export default Index;
+export default App;
