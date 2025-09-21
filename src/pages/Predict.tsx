@@ -4,33 +4,60 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useLanguage } from "@/context/LanguageContext";
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "@/firebase";
+
+interface Crop {
+  crop: string;
+  soil: string;
+  season: string;
+  months: number[];
+  avg_yield: number;
+  price: number;
+  profit?: number;
+}
 
 const Predict = () => {
   const { t } = useLanguage();
 
   const [soilType, setSoilType] = useState("");
   const [month, setMonth] = useState<number | null>(null);
-  const [results, setResults] = useState<any[]>([]);
+  const [results, setResults] = useState<Crop[]>([]);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!soilType || !month) return;
 
-    // Filter crops by soil type and growing month
-    const filtered = data.filter(
+    setLoading(true);
+
+    const filtered = (data as Crop[]).filter(
       (c) =>
         c.soil.toLowerCase().includes(soilType.toLowerCase()) &&
         c.months.includes(month)
     );
 
-    // Calculate profitability = yield × price
     const ranked = filtered
-      .map((c) => {
-        const profit = c.avg_yield * c.price;
-        return { ...c, profit };
-      })
-      .sort((a, b) => b.profit - a.profit);
+      .map((c) => ({ ...c, profit: c.avg_yield * c.price }))
+      .sort((a, b) => (b.profit ?? 0) - (a.profit ?? 0));
 
     setResults(ranked);
+    setLoading(false);
+
+    try {
+      await addDoc(collection(db, "predictions"), {
+        soilType,
+        month,
+        timestamp: new Date(),
+        results: ranked.map((r) => ({
+          crop: r.crop,
+          season: r.season,
+          profit: r.profit,
+        })),
+      });
+      console.log("Prediction saved to Firestore ✅");
+    } catch (e) {
+      console.error("Error saving prediction:", e);
+    }
   };
 
   return (
@@ -54,23 +81,16 @@ const Predict = () => {
             className="w-full border p-2 rounded-lg"
           >
             <option value="">{t.predict.monthPlaceholder}</option>
-            <option value={1}>January</option>
-            <option value={2}>February</option>
-            <option value={3}>March</option>
-            <option value={4}>April</option>
-            <option value={5}>May</option>
-            <option value={6}>June</option>
-            <option value={7}>July</option>
-            <option value={8}>August</option>
-            <option value={9}>September</option>
-            <option value={10}>October</option>
-            <option value={11}>November</option>
-            <option value={12}>December</option>
+            {Array.from({ length: 12 }, (_, i) => (
+              <option key={i + 1} value={i + 1}>
+                {new Date(0, i).toLocaleString("default", { month: "long" })}
+              </option>
+            ))}
           </select>
 
           {/* Button */}
-          <Button onClick={handleSubmit} className="w-full">
-            {t.predict.button}
+          <Button onClick={handleSubmit} className="w-full" disabled={loading}>
+            {loading ? t.predict.loading : t.predict.button}
           </Button>
 
           {/* Results */}
@@ -86,7 +106,7 @@ const Predict = () => {
                   </span>
                   <span className="font-semibold">
                     Yield: {r.avg_yield}t/ha | Price: ₹{r.price}/quintal |{" "}
-                    {t.predict.profitLabel}: ₹{r.profit.toFixed(0)}
+                    {t.predict.profitLabel}: ₹{r.profit?.toFixed(0)}
                   </span>
                 </div>
               ))}

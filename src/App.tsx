@@ -12,6 +12,8 @@ import Weather from "./pages/Weather";
 import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
 import Predict from "./pages/Predict";
+import Marketplace from "@/pages/Marketplace";
+import SavedCrops from "@/pages/SavedCrops";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -31,7 +33,9 @@ const App = () => (
   <Route path="/crops" element={<Crops />} />
   <Route path="/weather" element={<Weather />} />
   <Route path="/dashboard" element={<Dashboard />} />
-  <Route path="/predict" element={<Predict />} /> 
+  <Route path="/saved" element={<SavedCrops />} /> 
+  <Route path="/predict" element={<Predict />} />
+  <Route path="/marketplace" element={<Marketplace />} />
   <Route path="*" element={<NotFound />} />
 </Routes>
 

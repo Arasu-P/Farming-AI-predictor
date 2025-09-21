@@ -36,7 +36,9 @@ export const translations = {
     crops: "Crops",
     weather: "Weather",
     dashboard: "Dashboard",
-    predict: "Predict"
+    predict: "Predict",
+    marketplace: "Marketplace",
+    savedCrops: "Saved Crops"
   },
     predict: {
       title: "Crop Prediction (Profitability Ranking)",
@@ -93,7 +95,9 @@ export const translations = {
     crops: "ಬೆಳೆಗಳು",
     weather: "ಹವಾಮಾನ",
     dashboard: "ಡ್ಯಾಶ್‌ಬೋರ್ಡ್",
-    predict: "ಅಂದಾಜು"
+    predict: "ಅಂದಾಜು",
+    marketplace: "ಮಾರುಕಟ್ಟೆ",
+    savedCrops: "ಉಳಿಸಿದ ಬೆಳೆಗಳು"
   },
   }
 };
