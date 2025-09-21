@@ -50,8 +50,7 @@ Dashboard: Personalized farmer login, alerts, and monthly predictions.
 
 Clone the repository:
 
-git clone https://github.com/your-username/smart-crop-advisory.git
-cd smart-crop-advisory
+git clone https://https://github.com/Arasu-P/Farming-AI-predictor.git
 
 
 Install dependencies:
