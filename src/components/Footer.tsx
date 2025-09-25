@@ -78,7 +78,7 @@ const Footer = () => {
             <span>|</span>
             <span>Terms of Service</span>
             <span>|</span>
-            <span>© 2024 Karnataka Agriculture Department</span>
+            <span>© 2025 Karnataka Agriculture Department</span>
           </div>
           <div className="mt-4 md:mt-0">
             <p className="text-sm text-primary-foreground/60">

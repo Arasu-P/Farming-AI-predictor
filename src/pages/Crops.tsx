@@ -542,9 +542,9 @@ const Crops = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Crop List */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1 flex flex-col h-[calc(100vh-150px)]">
             {/* Search and Filters */}
-            <div className="space-y-4 mb-6">
+            <div className="space-y-4 mb-6 sticky top-0 bg-background/90 z-10 py-4">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                 <Input
@@ -570,7 +570,7 @@ const Crops = () => {
             </div>
 
             {/* Crop Cards */}
-            <div className="space-y-4">
+            <div className="space-y-4 overflow-y-auto pr-2 -mr-2">
               {filteredCrops.map((crop, index) => (
                 <Card 
                   key={crop.id}
