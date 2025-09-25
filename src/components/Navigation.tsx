@@ -16,7 +16,7 @@ const Navigation = () => {
     { name: t.nav.weather, path: "/weather" },
     { name: t.nav.dashboard, path: "/dashboard" },
     { name: t.nav.predict, path: "/predict" },
-     { name: 'Marketplace', path: '/Marketplace' }
+     { name: t.nav.marketplace, path: "/Marketplace" }
   ];
 
   const isActive = (path: string) => location.pathname === path;
